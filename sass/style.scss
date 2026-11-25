@@ -1,0 +1,296 @@
+@function pxToRem($pixels) {
+    @return calc($pixels / 16 * 1rem);
+}
+
+    $cyan-600: #4d96a9;
+    $cyan-300: #8fe3f9;
+    $purple-600: #855fb1;
+    $purple-300: #d9b8ff;
+    $slate-900: #28283d;
+    $slate-600: #87879d;
+    $slate-300: #d1d1df;
+    $white: #fafafa; 
+
+    // Font weight
+    $Black: 900;
+    $Medium: 500;
+
+    $space-1400: pxToRem(112);
+    $space-1000: pxToRem(80);
+    $space-900: pxTorem(72);
+    $space-800: pxToRem(64);
+    $space-700: pxToRem(56);
+    $space-500: pxToRem(40);
+    $space-400: pxToRem(32);
+    $space-300: pxToRem(24);
+    $space-200: pxToRem(16);
+    $space-100: pxToRem(8);
+    $space-50: pxToRem(4);
+
+    $MOBILE_MAX_WIDTH: 660px;
+    $TABLET_MAX_WIDTH: 1024px;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: RedHatDisplay;
+    src: url(../assets/fonts/Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf);
+    font-weight: 500 900;
+    font-display: swap;
+}
+
+.text-preset-1 {
+    font-family: RedHatDisplay, sans-serif;
+    font-weight: $Black;
+    line-height: 1.1;
+    @media (width <= $MOBILE_MAX_WIDTH) {
+        font-size: pxToRem(40);
+    } @media ($MOBILE_MAX_WIDTH < width <= $TABLET_MAX_WIDTH) {
+        font-size: pxToRem(48);
+    }@media ($TABLET_MAX_WIDTH < width) {
+        font-size: pxToRem(64);
+    }
+}
+
+.text-preset-2 {
+    font-family: RedHatDisplay, sans-serif;
+    font-weight: $Black;
+    line-height: 1.1;
+    @media (width <= $MOBILE_MAX_WIDTH) {
+        font-size: pxToRem(32);
+    } @media ($MOBILE_MAX_WIDTH < width <= $TABLET_MAX_WIDTH) {
+        font-size: pxToRem(36);
+    }@media ($TABLET_MAX_WIDTH < width) {
+        font-size: pxToRem(40);
+    }
+}
+
+.text-preset-3 {
+    font-family: RedHatDisplay, sans-serif;
+    font-weight: $Black; 
+    line-height: 1.1;
+    letter-spacing: pxToRem(4);
+    @media (width <= $MOBILE_MAX_WIDTH) {
+        font-size: pxToRem(12);
+    } @media ($MOBILE_MAX_WIDTH < width <= $TABLET_MAX_WIDTH) {
+        font-size: pxToRem(14);
+    }@media ($TABLET_MAX_WIDTH < width) {
+        font-size: pxToRem(16);
+    }
+}
+
+.text-preset-4 {
+    font-family: RedHatDisplay, sans-serif;
+    font-weight: $Medium;
+    line-height: 1.1;
+    @media (width <= $TABLET_MAX_WIDTH) {
+        font-size: pxToRem(16);
+    }@media ($TABLET_MAX_WIDTH < width) {
+        font-size: pxToRem(18);
+    }
+}
+
+.text-preset-5 {
+    font-family: RedHatDisplay, sans-serif;
+    font-weight: $Black;
+    line-height: 1.5;
+    font-size: pxToRem(16);
+}
+
+body {
+    width: 100%;
+    background-color: $white;
+}
+
+nav {
+    width: 100%;
+}
+
+.meet-logo {
+    display: block;
+    margin: 3rem auto 0;
+}
+
+.main {
+    width: 100%;
+}
+
+.hero-wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem 0 2rem;
+}
+
+.hero-text-content {
+    padding: 4rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-tablet {
+    display: none;
+}
+
+.hero-images-wrapper {
+    display: flex;
+    width: max(27rem, 100%);
+}
+
+.hero {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-text-content h1 {
+    color: $slate-900;
+    text-align: center;
+}
+
+.hero-text-content p {
+    color: $slate-600;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.button {
+    color: $white;
+    border-radius: 2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+}
+
+.download-button {
+    background-color: $cyan-600;
+}
+
+.version-number {
+    color: $cyan-300;
+}
+
+.what-is-it-button {
+    background-color: $purple-600;
+}
+
+// main-content section
+.main-content {
+    padding: 2rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number-rectangle {
+    width:0;
+    height: 5rem;
+    border: 1px solid $slate-300;
+}
+
+.number {
+    color: $slate-600;
+    border-radius: 50%;
+    border: 1px solid $slate-300;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// main-content
+
+.main-content {
+    width: 100%;
+}
+
+.image-collage-wrapper {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 1rem;
+    margin: 4rem 0;
+    width: calc(311/375 * 100%);
+}
+
+.image-collage-wrapper img {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    border-radius: .5rem;
+}
+
+.main-content h3 {
+    color: $cyan-600;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+} 
+
+.main-content h2 {
+    color: $slate-900;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.main-content p {
+    color: $slate-600;
+    text-align: center;
+}
+
+// 02-section
+
+// normal
+// darken
+// multiply
+// color-burn
+// lighten
+// screen 
+// color-dodge
+// overlay
+// soft-light
+// hard-light
+// difference
+// exclusion
+// hue
+// saturation
+// color
+// luminosity
+
+footer {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: 
+        linear-gradient(rgba($cyan-600, .85), rgba($cyan-600, .85)),
+        url(../assets/mobile/image-footer.jpg);
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+footer button {
+    background-color: $purple-600;
+}
+
+footer button span {
+    color: $purple-300;
+}
+
+

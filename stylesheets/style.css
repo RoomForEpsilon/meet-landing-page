@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: RedHatDisplay;
+  src: url(../assets/fonts/Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf);
+  font-weight: 500 900;
+  font-display: swap;
+}
+.text-preset-1 {
+  font-family: RedHatDisplay, sans-serif;
+  font-weight: 900;
+  line-height: 1.1;
+}
+@media (width <= 660px) {
+  .text-preset-1 {
+    font-size: 2.5rem;
+  }
+}
+@media (660px < width <= 1024px) {
+  .text-preset-1 {
+    font-size: 3rem;
+  }
+}
+@media (1024px < width) {
+  .text-preset-1 {
+    font-size: 4rem;
+  }
+}
+
+.text-preset-2 {
+  font-family: RedHatDisplay, sans-serif;
+  font-weight: 900;
+  line-height: 1.1;
+}
+@media (width <= 660px) {
+  .text-preset-2 {
+    font-size: 2rem;
+  }
+}
+@media (660px < width <= 1024px) {
+  .text-preset-2 {
+    font-size: 2.25rem;
+  }
+}
+@media (1024px < width) {
+  .text-preset-2 {
+    font-size: 2.5rem;
+  }
+}
+
+.text-preset-3 {
+  font-family: RedHatDisplay, sans-serif;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0.25rem;
+}
+@media (width <= 660px) {
+  .text-preset-3 {
+    font-size: 0.75rem;
+  }
+}
+@media (660px < width <= 1024px) {
+  .text-preset-3 {
+    font-size: 0.875rem;
+  }
+}
+@media (1024px < width) {
+  .text-preset-3 {
+    font-size: 1rem;
+  }
+}
+
+.text-preset-4 {
+  font-family: RedHatDisplay, sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+}
+@media (width <= 1024px) {
+  .text-preset-4 {
+    font-size: 1rem;
+  }
+}
+@media (1024px < width) {
+  .text-preset-4 {
+    font-size: 1.125rem;
+  }
+}
+
+.text-preset-5 {
+  font-family: RedHatDisplay, sans-serif;
+  font-weight: 900;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+body {
+  width: 100%;
+  background-color: #fafafa;
+}
+
+nav {
+  width: 100%;
+}
+
+.meet-logo {
+  display: block;
+  margin: 3rem auto 0;
+}
+
+.main {
+  width: 100%;
+}
+
+.hero-wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem 0 2rem;
+}
+
+.hero-text-content {
+  padding: 4rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-tablet {
+  display: none;
+}
+
+.hero-images-wrapper {
+  display: flex;
+  width: max(27rem, 100%);
+}
+
+.hero {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-text-content h1 {
+  color: #28283d;
+  text-align: center;
+}
+
+.hero-text-content p {
+  color: #87879d;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.button {
+  color: #fafafa;
+  border-radius: 2rem;
+  padding: 1rem 2.5rem;
+  border: none;
+}
+
+.download-button {
+  background-color: #4d96a9;
+}
+
+.version-number {
+  color: #8fe3f9;
+}
+
+.what-is-it-button {
+  background-color: #855fb1;
+}
+
+.main-content {
+  padding: 2rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number-rectangle {
+  width: 0;
+  height: 5rem;
+  border: 1px solid #d1d1df;
+}
+
+.number {
+  color: #87879d;
+  border-radius: 50%;
+  border: 1px solid #d1d1df;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content {
+  width: 100%;
+}
+
+.image-collage-wrapper {
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  gap: 1rem;
+  margin: 4rem 0;
+  width: 82.9333333333%;
+}
+
+.image-collage-wrapper img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.main-content h3 {
+  color: #4d96a9;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.main-content h2 {
+  color: #28283d;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.main-content p {
+  color: #87879d;
+  text-align: center;
+}
+
+footer {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(77, 150, 169, 0.85), rgba(77, 150, 169, 0.85)), url(../assets/mobile/image-footer.jpg);
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+footer button {
+  background-color: #855fb1;
+}
+
+footer button span {
+  color: #d9b8ff;
+}
+
+/*# sourceMappingURL=style.css.map */
