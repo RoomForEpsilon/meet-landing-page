@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./assets/images/screenshot-meet.png)
+![Meet landing page solution screenshot](./assets/images/screenshot-meet.png)
 
 ### Links
 
