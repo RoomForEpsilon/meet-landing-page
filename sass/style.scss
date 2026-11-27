@@ -16,18 +16,6 @@
     $Black: 900;
     $Medium: 500;
 
-    $space-1400: pxToRem(112);
-    $space-1000: pxToRem(80);
-    $space-900: pxToRem(72);
-    $space-800: pxToRem(64);
-    $space-700: pxToRem(56);
-    $space-500: pxToRem(40);
-    $space-400: pxToRem(32);
-    $space-300: pxToRem(24);
-    $space-200: pxToRem(16);
-    $space-100: pxToRem(8);
-    $space-50: pxToRem(4);
-
     $MOBILE_MAX_WIDTH: 660px;
     $TABLET_MAX_WIDTH: 1024px;
 
@@ -108,7 +96,7 @@ body {
     background-color: $white;
 }
 
-nav {
+header {
     width: 100%;
 }
 
@@ -117,7 +105,7 @@ nav {
     margin: 3rem auto 0;
 }
 
-.main {
+main {
     width: 100%;
 }
 
@@ -135,10 +123,6 @@ nav {
     flex-direction: column;
     gap: .5rem;
     align-items: center;
-}
-
-.hero-tablet {
-    display: none;
 }
 
 .hero-images-wrapper {
@@ -193,12 +177,12 @@ nav {
 }
 
 .what-is-it-button {
-    background-color: $purple-button-hover;
+    background-color: $purple-600;
 }
 
 .what-is-it-button:hover,
 .what-is-it-button:focus {
-    background-color: $purple-300;
+    background-color: $purple-button-hover;
 }
 
 // main-content section
@@ -207,6 +191,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .number-rectangle {
@@ -224,10 +209,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.main-content {
-    width: 100%;
 }
 
 .image-collage-wrapper {
@@ -250,7 +231,7 @@ nav {
     align-items: center;
 }
 
-.main-content h3 {
+.main-content .introductory-label {
     color: $cyan-600;
     padding-bottom: 1rem;
     text-transform: uppercase;
@@ -267,7 +248,7 @@ nav {
     text-align: center;
 }
 
-// 02-section
+// footer section 
 
 footer {
     position: relative;
@@ -313,12 +294,30 @@ footer button {
     background-color: $purple-600;
 }
 
-footer button:hover {
+footer button:hover,
+footer button:focus {
     background-color: $purple-button-hover;
 }
 
 footer button span {
     color: $purple-300;
+}
+
+@media ($MOBILE_MAX_WIDTH < width) {
+    .button-wrapper {
+        flex-direction: row;
+    }
+
+    .image-collage-wrapper {
+        grid-template: 1fr / repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .hero-text-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
 }
 
 @media ($MOBILE_MAX_WIDTH < width <= $TABLET_MAX_WIDTH) {
@@ -328,49 +327,34 @@ footer button span {
         margin: 0 auto;
     }
 
-    .button-wrapper {
-        flex-direction: row;
-    }
-
     .image-collage-wrapper {
         width: calc(680/768 * 100%);
-        display: flex;
-        gap: 1.5rem;
-    }
-
-    .main-content img {
-        width: calc(150/680 * 100%);
     }
 
     .main-content .text-wrapper {
-        width: calc(504/608 * 100%);
+        max-width: 31.5rem;
     }
 
     footer {
-        background-size: cover;
-        background-repeat: no-repeat;
         background-image: 
             linear-gradient(rgba($cyan-600, .85), rgba($cyan-600, .85)),
             url(../assets/tablet/image-footer.jpg);
     }
 
     .footer-content {
-        width: (568/768 * 100%);
+        width: calc(568/768 * 100%);
     }
 }
 
 @media ($TABLET_MAX_WIDTH < width) {
 
-    main {
-        position: relative;
-    }
-    
     .hero-wrapper {
-        width: calc(1120/1440 * 100%);
+        width: 100%;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
         justify-content: center;
+        position: relative;
     }
 
     .hero {
@@ -393,30 +377,18 @@ footer button span {
         width: 0;
     }
     .hero-text-content {
-        width: calc(448/1120 * 100%);
-    }
-
-    .button-wrapper {
-        flex-direction: row;
+        max-width: 28rem;
     }
 
     .image-collage-wrapper {
         width: calc(1120/1440 * 100%);
-        display: flex;
-        gap: 1.5rem;
-    }
-
-    .main-content img {
-        width: calc(256/1120 * 100%);
     }
 
     .main-content .text-wrapper {
-        width: calc(544/1440 * 100%);
+        max-width: 34rem;
     }
 
     footer {
-        background-size: cover;
-        background-repeat: no-repeat;
         background-image: 
             linear-gradient(rgba($cyan-600, .85), rgba($cyan-600, .85)),
             url(../assets/desktop/image-footer.jpg);
