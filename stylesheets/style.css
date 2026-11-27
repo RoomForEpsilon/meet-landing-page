@@ -199,7 +199,15 @@ main {
   width: 100%;
 }
 
+.number-graphic-wrapper {
+  position: relative;
+  padding-top: 5rem;
+}
+
 .number-rectangle {
+  position: absolute;
+  left: 47%;
+  top: 0;
   width: 0;
   height: 5rem;
   border: 1px solid #d1d1df;
